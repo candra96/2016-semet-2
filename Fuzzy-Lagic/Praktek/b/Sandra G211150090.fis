@@ -1,0 +1,47 @@
+[System]
+Name='Sandra G211150090'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Kecepatan'
+Range=[0 80]
+NumMFs=5
+MF1='Sangat_Lambat':'trimf',[0 0 20]
+MF2='Cukup':'trimf',[20 40 60]
+MF3='Cepat_Sekali':'trimf',[60 80 80]
+MF4='Lambat':'trimf',[0 20 40]
+MF5='Cepat':'trimf',[40 60 80]
+
+[Input2]
+Name='Jarak'
+Range=[0 4]
+NumMFs=5
+MF1='Sangat_Dekat':'trimf',[0 0 1]
+MF2='Agak_Jauh':'trimf',[2 3 4]
+MF3='Jauh_Sekali':'trimf',[3 4 4]
+MF4='Agak_Dekat':'trimf',[0 1 2]
+MF5='Sedang':'trimf',[1 2 3]
+
+[Output1]
+Name='Posisi_Pedal_Rem'
+Range=[0 40]
+NumMFs=5
+MF1='Injak_Agak_Penuh':'trimf',[0 10 20]
+MF2='Injak_Sedang':'trimf',[10 20 30]
+MF3='Injak_Sedikit_Sekali':'trimf',[30 40 40]
+MF4='Injak_Penuh':'trimf',[0 0 10]
+MF5='Injak_Sedikit':'trimf',[20 30 40]
+
+[Rules]
+5 1, 5 (1) : 1
+2 1, 2 (1) : 1
+2 1, 1 (1) : 1

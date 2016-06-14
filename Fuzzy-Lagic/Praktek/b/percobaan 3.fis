@@ -1,0 +1,38 @@
+[System]
+Name='percobaan 3'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='motivasi'
+Range=[0 80]
+NumMFs=3
+MF1='rendah':'trapmf',[0 0 10 35]
+MF2='sedang':'trapmf',[10 36 43 70]
+MF3='tinggi':'trapmf',[44.7883597883598 69.7883597883598 79.7883597883598 79.7883597883598]
+
+[Input2]
+Name='minat'
+Range=[0 60]
+NumMFs=3
+MF1='kurang':'trapmf',[0 0 5 25]
+MF2='cukup':'trapmf',[10 27 32 50]
+MF3='bagus':'trapmf',[35 55 60 60]
+
+[Output1]
+Name='output1'
+Range=[0 4]
+NumMFs=3
+MF1='kurang':'trapmf',[0.0105820105820107 0.0105820105820107 0.170582010582011 1.51058201058201]
+MF2='baik':'trapmf',[0.5 1.84 2.2 3.5]
+MF3='memuaskan':'trapmf',[2.5 3.84 4 4]
+
+[Rules]

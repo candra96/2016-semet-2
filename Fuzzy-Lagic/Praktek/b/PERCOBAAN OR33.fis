@@ -1,0 +1,47 @@
+[System]
+Name='PERCOBAAN OR33'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='motivasi'
+Range=[0 100]
+NumMFs=3
+MF1='rendah':'trapmf',[0 0 30 50]
+MF2='sedang':'trimf',[30 50 70]
+MF3='tinggi':'trapmf',[50 70 100 100]
+
+[Input2]
+Name='minat'
+Range=[0 100]
+NumMFs=3
+MF1='kurang':'trapmf',[0 0 25 50]
+MF2='cukup':'trimf',[25 50 75]
+MF3='bagus':'trapmf',[50 75 100 100]
+
+[Output1]
+Name='IPK'
+Range=[0 4]
+NumMFs=3
+MF1='kurang':'trapmf',[0 0 1 2.5]
+MF2='baik':'trimf',[1.5 2.5 3.5]
+MF3='memuaskan':'trapmf',[3 3.5 4 4]
+
+[Rules]
+1 1, 1 (1) : 2
+1 2, 1 (1) : 2
+1 3, 2 (1) : 2
+2 1, 2 (1) : 2
+2 2, 2 (1) : 2
+2 3, 2 (1) : 2
+3 1, 2 (1) : 2
+3 2, 2 (1) : 2
+3 3, 3 (1) : 2

@@ -1,0 +1,38 @@
+[System]
+Name='pratikum 2 fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='MOTIVASI'
+Range=[0 90]
+NumMFs=3
+MF1='Rendah':'trapmf',[0 0 10 45]
+MF2='Sedang':'trapmf',[20 40 50 70]
+MF3='Tinggi':'trapmf',[45 80 90 90]
+
+[Input2]
+Name='MINAT'
+Range=[0 90]
+NumMFs=3
+MF1='Kurang':'trapmf',[0 0 10 45]
+MF2='Cukup':'trapmf',[20 40 50 70]
+MF3='Bagus':'trapmf',[45 80 90 90]
+
+[Output1]
+Name='PRESTASI_BELAJAR'
+Range=[0 4]
+NumMFs=3
+MF1='Kurang_Baik':'zmf',[0.00650054171180936 2.18]
+MF2='Memuaskan':'gbellmf',[0.886240520043337 2.29 4]
+MF3='Baik':'gauss2mf',[0.553 1.73 0.588552105178953 2.19934994582882]
+
+[Rules]
